@@ -1,0 +1,12 @@
+<p>
+  Which one do you want to import?
+</p>
+
+<form action = "\save">
+<% @Suggestions.each_with_index do |recipe, index| %>
+      <input type="radio" name="index" value = <%= index %> >
+      <%= recipe.name %>
+      <br>
+  <% end %>
+   <input type="submit" name="post"><br>
+</form>

@@ -1,0 +1,25 @@
+<h>
+  Welcome to the Cookbook!
+</h>
+<br>
+</br>
+
+<p>
+  Here are your recipes
+</p>
+
+<ul>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <li>
+    <a href = "/view?index=<%=index%>name=<%=recipe.name%>">
+      <%= recipe.name %>
+    </a>
+  </li>
+  <% end %>
+</ul>
+
+<a href = '/new' > Add a new recipe! </a>
+</br>
+<a href = '/delete' > Delete a recipe </a>
+</br>
+<a href = '/import' > Import a recipe </a>
